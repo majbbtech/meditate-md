@@ -34,6 +34,7 @@ handle for deterministic runtime maintenance.
 ```bash
 npm test
 npm run demo
+npm run poc
 ```
 
 Run the CLI against a state fixture:
@@ -61,6 +62,18 @@ The reference implementation reads a `meditate-policy` JSON block from
 
 The demo uses simulated agent state so the mechanism is easy to verify without
 calling an LLM API.
+
+## PoC Agent
+
+Run a small deterministic agent loop that uses `MEDITATE.md` before each tool
+step:
+
+```bash
+npm run poc
+```
+
+The PoC writes a transcript, final state, and report to `.meditate-poc/`. This
+directory is ignored by Git.
 
 ## Proposed Uses
 
@@ -98,6 +111,7 @@ and the relationship between `MEDITATE.md` and `SOUL.md`.
 MEDITATE.md              The proposed spec and default policy
 src/cli.js               Command-line interface
 src/demo.js              Simulated long-running agent loop
+src/poc-agent.js         Deterministic PoC agent using MEDITATE.md
 src/policy.js            Markdown policy parser
 src/runtime.js           Trigger evaluator and maintenance actions
 examples/                Sample agent states

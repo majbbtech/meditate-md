@@ -16,6 +16,7 @@
   },
   "scripts": {
     "demo": "node src/cli.js demo",
+    "poc": "node src/cli.js poc",
     "test": "node --test"
   },
   "keywords": [

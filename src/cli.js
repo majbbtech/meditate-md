@@ -2,6 +2,7 @@
 import { readFile } from "node:fs/promises";
 import { runDemo } from "./demo.js";
 import { loadPolicy } from "./policy.js";
+import { runPocAgent } from "./poc-agent.js";
 import { applyMeditation, evaluateState } from "./runtime.js";
 
 async function main() {
@@ -18,6 +19,12 @@ async function main() {
 
   if (command === "demo") {
     console.log(runDemo(policy));
+    return;
+  }
+
+  if (command === "poc") {
+    const outputDir = readOption(args, "--out") ?? ".meditate-poc";
+    console.log(await runPocAgent(policy, { outputDir }));
     return;
   }
 
@@ -48,6 +55,7 @@ function printHelp() {
 
 Usage:
   node src/cli.js demo [--policy MEDITATE.md]
+  node src/cli.js poc [--policy MEDITATE.md] [--out .meditate-poc]
   node src/cli.js check --state examples/state-drifting.json [--policy MEDITATE.md]
 `);
 }
