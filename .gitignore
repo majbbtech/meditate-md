@@ -1,0 +1,9 @@
+node_modules/
+coverage/
+.DS_Store
+*.log
+private/
+.private/
+notes/
+chat/
+roadmap-private.md

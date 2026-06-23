@@ -1,0 +1,12 @@
+{
+  "objective": "Add tests for the policy parser",
+  "constraints": ["keep the implementation dependency-free"],
+  "decisions": ["use node:test"],
+  "openQuestions": [],
+  "nextStep": "run npm test",
+  "contextUtilization": 0.41,
+  "iterationsSinceCheckpoint": 2,
+  "recentActions": ["inspect", "edit", "test"],
+  "driftScore": 0.12,
+  "conflictingInstructionCount": 0
+}

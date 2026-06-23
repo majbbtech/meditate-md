@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">MEDITATE.md logo</title>
+  <desc id="desc">A pause symbol inside a rounded context window with small checkpoint nodes.</desc>
+  <rect width="512" height="512" fill="#F7F8F5"/>
+  <rect x="72" y="96" width="368" height="320" rx="40" fill="none" stroke="#17201B" stroke-width="24"/>
+  <path d="M128 168h256" stroke="#D9E2DA" stroke-width="18" stroke-linecap="round"/>
+  <path d="M128 344h256" stroke="#D9E2DA" stroke-width="18" stroke-linecap="round"/>
+  <rect x="196" y="206" width="42" height="100" rx="12" fill="#4FB286"/>
+  <rect x="274" y="206" width="42" height="100" rx="12" fill="#5B8DEF"/>
+  <circle cx="150" cy="256" r="16" fill="#17201B"/>
+  <circle cx="362" cy="256" r="16" fill="#17201B"/>
+</svg>

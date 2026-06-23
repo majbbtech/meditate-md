@@ -1,0 +1,12 @@
+{
+  "objective": "Debug an agent loop",
+  "constraints": ["do not ignore system instructions"],
+  "decisions": ["preserve useful context before pruning"],
+  "openQuestions": ["is the agent repeating the same action?"],
+  "nextStep": "recover from repeated search loop",
+  "contextUtilization": 0.84,
+  "iterationsSinceCheckpoint": 7,
+  "recentActions": ["search", "search", "search"],
+  "driftScore": 0.61,
+  "conflictingInstructionCount": 1
+}

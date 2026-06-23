@@ -1,0 +1,25 @@
+{
+  "name": "meditate-md",
+  "version": "0.1.0",
+  "description": "A workspace-readable state hygiene convention for long-running AI agents.",
+  "type": "module",
+  "bin": {
+    "meditate-md": "./src/cli.js"
+  },
+  "scripts": {
+    "demo": "node src/cli.js demo",
+    "test": "node --test"
+  },
+  "keywords": [
+    "ai-agents",
+    "agent",
+    "context-management",
+    "markdown",
+    "state-management"
+  ],
+  "author": "Majilesh",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  }
+}
