@@ -3,6 +3,14 @@
   "version": "0.1.0",
   "description": "A workspace-readable state hygiene convention for long-running AI agents.",
   "type": "module",
+  "homepage": "https://github.com/majbbtech/meditate-md#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/majbbtech/meditate-md.git"
+  },
+  "bugs": {
+    "url": "https://github.com/majbbtech/meditate-md/issues"
+  },
   "bin": {
     "meditate-md": "./src/cli.js"
   },
