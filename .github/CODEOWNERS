@@ -1,0 +1,6 @@
+# Require owner review for automation and project policy changes when
+# GitHub branch protection has "Require review from Code Owners" enabled.
+/.github/ @majbbtech
+/MEDITATE.md @majbbtech
+/package.json @majbbtech
+/src/ @majbbtech
