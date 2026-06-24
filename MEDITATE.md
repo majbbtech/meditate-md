@@ -46,6 +46,11 @@ pattern, and choose a different strategy.
 
 Tools should read the following fenced block. Unknown fields should be ignored.
 
+The `compact.retain` and `compact.discard` lists describe intent for a runtime
+that manages real context. They are advisory: the runtime decides how to apply
+them, and the dependency-free reference implementation in this repository does not
+enforce them (it only simulates the utilization drop).
+
 ```meditate-policy
 {
   "version": "0.1.0",
@@ -102,6 +107,11 @@ The reference implementation expects a state object shaped like this:
 
 ```json
 {
+  "objective": "Debug an agent loop",
+  "constraints": ["do not ignore system instructions"],
+  "decisions": ["preserve useful context before pruning"],
+  "openQuestions": ["is the agent repeating the same action?"],
+  "nextStep": "recover from repeated search loop",
   "contextUtilization": 0.81,
   "iterationsSinceCheckpoint": 6,
   "recentActions": ["search", "search", "search"],
@@ -109,6 +119,10 @@ The reference implementation expects a state object shaped like this:
   "conflictingInstructionCount": 0
 }
 ```
+
+The first five fields are the `checkpoint.summaryFields` the runtime persists; the
+remaining fields drive the trigger thresholds. A `checkpoint` against a state that
+omits the summary fields will simply record them as `null`.
 
 Runtimes may add additional fields. The core triggers above are intentionally
 small so the convention can be adopted without a framework.
